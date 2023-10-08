@@ -48,7 +48,7 @@ class SQLHelper {
   }
 
   // Read a single item by id
-  // The app doesn't use this method but I put here in case you want to see it
+
   static Future<List<Map<String, dynamic>>> getItem(int id) async {
     final db = await SQLHelper.db();
     return db.query('passwords', where: "id = ?", whereArgs: [id], limit: 1);
